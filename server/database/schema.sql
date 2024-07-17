@@ -31,7 +31,7 @@ CREATE TABLE track (
     REFERENCES album(id)
 );
 
-CREATE TABLE `release` (
+CREATE TABLE publication (
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
   path VARCHAR(255),
   band_id INT UNSIGNED NOT NULL,
