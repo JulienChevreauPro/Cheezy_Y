@@ -5,7 +5,7 @@ CREATE TABLE band (
   biography TEXT,
   style VARCHAR(255),
   start YEAR,
-  end YEAR,
+  end YEAR
 );
 
 CREATE TABLE album (
@@ -31,7 +31,7 @@ CREATE TABLE track (
     REFERENCES album(id)
 );
 
-CREATE TABLE release (
+CREATE TABLE `release` (
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
   path VARCHAR(255),
   band_id INT UNSIGNED NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE member (
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
   nick_name VARCHAR(80),
   year_of_birth YEAR,
-  influences TEXT,
+  influences TEXT
 );
 
 CREATE TABLE band_member (
@@ -61,7 +61,7 @@ CREATE TABLE band_member (
 
 CREATE TABLE instrument (
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  name VARCHAR(80),
+  name VARCHAR(80)
 );
 
 CREATE TABLE member_instrument (
